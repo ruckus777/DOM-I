@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let navbar1 = document.querySelector("nav");
+navbar1 = siteContent.nav
 
 let ctaimage = document.querySelector("#cta-img");
 ctaimage.src = siteContent.cta["img-src"];
@@ -50,4 +52,10 @@ servicesHeaderH4.textContent = siteContent["main-content"] ["services-h4"];
 
 let servicesHeaderP = document.querySelector(".bottom-content .text-content:nth-child(2) p");
 servicesHeaderP = document.querySelector
+
+
+
+let footerP = document.querySelector("footer");
+footerP.textContent = siteContent.footer.copyright;
+
 
