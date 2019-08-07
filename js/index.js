@@ -39,23 +39,58 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent['nav']['img-src'])
 
-let navbar1 = document.querySelector("nav");
-navbar1 = siteContent.nav
+let navBar = document.querySelectorAll('nav a')
 
-let ctaimage = document.querySelector("#cta-img");
-ctaimage.src = siteContent.cta["img-src"];
+navBar[0].textContent = siteContent['nav']['nav-item-1']
+navBar[1].textContent = siteContent['nav']['nav-item-2']
+navBar[2].textContent = siteContent['nav']['nav-item-3']
+navBar[3].textContent = siteContent['nav']['nav-item-4']
+navBar[4].textContent = siteContent['nav']['nav-item-5']
+navBar[5].textContent = siteContent['nav']['nav-item-6']
+// End header
 
-let servicesHeaderH4 = document.querySelector(".bottom-content .text-content:nth-child(2) h4");
-servicesHeaderH4.textContent = siteContent["main-content"] ["services-h4"];
+//CTA
+  //H!
+  let ctaH1 = document.querySelector('.cta-text h1')
+  ctaH1.textContent = siteContent['cta']['h1']
 
-let servicesHeaderP = document.querySelector(".bottom-content .text-content:nth-child(2) p");
-servicesHeaderP = document.querySelector
+  //Image
+  let ctaImg = document.getElementById("cta-img");
+  ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
+  let ctaBtn = document.querySelector('.cta-text button')
+  ctaBtn.textContent = siteContent['cta']['button']
+//END CTA
+//Main-content
+  //Top content
 
+    let topContent = document.querySelectorAll('.top-content .text-content')
+    //text-content-0
+    topContent[0].firstChild.textContent = siteContent['main-content']['features-h4']
+    topContent[0].lastChild.textContent = siteContent['main-content']['features-content']
+    //text-content-1
+    topContent[1].firstChild.textContent = siteContent['main-content']['about-h4']
+    topContent[1].lastChild.textContent = siteContent['main-content']['about-content']
 
-let footerP = document.querySelector("footer");
-footerP.textContent = siteContent.footer.copyright;
+  //IMG
+  let mainMiddleImg = document.getElementById("middle-img");
+  mainMiddleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
+  //Bottom-content
+    let bottomContent = document.querySelectorAll('.bottom-content .text-content')
+    
+    bottomContent[0].firstChild.textContent = siteContent['main-content']['services-h4']
+    bottomContent[0].lastChild.textContent = siteContent['main-content']['services-content']
 
+    bottomContent[1].firstChild.textContent = siteContent['main-content']['product-h4']
+    bottomContent[1].lastChild.textContent = siteContent['main-content']['product-content']
+
+    bottomContent[2].firstChild.textContent = siteContent['main-content']['vision-h4']
+    bottomContent[2].lastChild.textContent = siteContent['main-content']['vision-content']
+//End Main-content
+
+let contact = document.querySelectorAll(`contact`)
+
+contact[]
